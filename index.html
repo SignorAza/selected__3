@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+      
+      <div class="box">
+      <h1> Выберите категорию </h1>
+      <input type="text" v-model="text">
+
+      <select v-model="selected">
+      <option>CSgo</option>
+      <option>Dota</option>
+      <option>Pubg</option>
+      </select>
+
+      <form @submit.prevent="addName">
+      <button>Добавить игрока</button>
+    </form>
+
+    <p>Название заголовка это - {{ text }}</p>
+
+      <ul class="list">
+        <li v-for="(part,i) in list" :key="part.i" >
+        <p>Название игры: {{ part.name }}</p>
+        <p>Порядковый номер: {{ part.id }}</p>
+        <p class="red">{{ part.user }}</p>
+        <p class="red">{{ part.userb }}</p>
+        <p class="red">{{ part.newuser }}</p>
+        
+        <p class="red">{{  }}</p>  
+        </li>
+        <li v-for="(part,i) in lista" :key="part.i" >
+          <p>Название игры: {{ part.name }}</p>
+          <p>Порядковый номер: {{ part.id }}</p>
+          <p class="red">{{ part.user }}</p>
+          <p class="red">{{ part.userb }}</p>
+          <p class="red">{{ part.newuser }}</p>
+          <p class="red">{{  }}</p>
+        </li>
+        <li v-for="(part,i) in listb" :key="part.i" >
+          <p>Название игры: {{ part.name }}</p>
+          <p>Порядковый номер: {{ part.id }}</p>
+          <p class="red">{{ part.user }}</p>
+          <p class="red">{{ part.newuser }}</p>
+          <p class="red">{{  }}</p>
+          
+        </li>
+        
+      </ul>
+
+      </div>
+    </div>
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>
